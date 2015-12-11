@@ -12,6 +12,7 @@ body {
   background-attachment: fixed;
   font-family: 'Century Gothic';
   color: white;
+  text-align: center;
 }
 #button {
   padding: 50px;
