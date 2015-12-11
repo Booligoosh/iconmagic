@@ -1,6 +1,15 @@
 body {
   margin: 0;
-  background-color: orange;
+  background-image: 
+    linear-gradient(
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5)
+    ),
+    url("https://cloud.githubusercontent.com/assets/14034891/11739648/198aa462-a041-11e5-9fe1-cd6af4a76df6.png");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   font-family: 'Century Gothic';
   color: white;
 }
