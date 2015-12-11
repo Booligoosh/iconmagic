@@ -4,6 +4,6 @@
     <link rel="stylesheet" href="/iconmagic/style.css">
   </head>
   <body>
-    <iframe href="#"></iframe>
+    <iframe href="<?php echo $_GET["website"]; ?>"></iframe>
   </body>
 </html>
