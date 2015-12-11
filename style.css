@@ -29,6 +29,12 @@ h3 {
 p {
   font-size: 5em;
 }
+form {
+  font-size: 5em;
+}
+input {
+  font-size: 5em;
+}
 iframe {
   position: absolute;
   top: 0;
