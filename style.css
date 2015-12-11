@@ -1,0 +1,13 @@
+body {
+  margin: 0;
+  background-color: orange;
+  font-family: 'Century Gothic';
+  color: white;
+}
+#button {
+  padding: 50px;
+  border-radius: 10px;
+  background-color: #87CEEB;
+  text-decoration: none;
+  color: white;
+}
