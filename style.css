@@ -11,3 +11,8 @@ body {
   text-decoration: none;
   color: white;
 }
+iframe {
+  line-height: 100%;
+  width: 100%;
+  height: auto;
+}
