@@ -16,11 +16,18 @@ body {
 }
 #button {
   padding: 10px;
-  border-radius: 10px;
   width: auto;
-  background-color: #87CEEB;
   text-decoration: none;
   color: white;
+}
+h1 {
+  font-size: 10em;
+}
+h3 {
+  font-size: 5em;
+}
+p {
+  font-size: 5em;
 }
 iframe {
   position: absolute;
