@@ -17,6 +17,7 @@ body {
 #button {
   padding: 10px;
   border-radius: 10px;
+  width: auto;
   background-color: #87CEEB;
   text-decoration: none;
   color: white;
