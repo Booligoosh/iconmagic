@@ -12,40 +12,23 @@
       //params[2] => icon
       
       //WEBSITE:
-      var website = params[0].split('');
-      for (var i = 0; i < website.length; i++) {
-        if (website[i] === '%') {
-          var hexString = website[i + 1] + website[i + 2];
-          website.splice(i, 3, String.fromCharCode(parseInt('0x' + hexString)))
+      for (var loop = 0; loop < params.length; loop++) {
+        var cur = params[loop].split('');
+        for (var i = 0; i < cur.length; i++) {
+          if (cur[i] === '%') {
+            var hexString = cur[i + 1] + cur[i + 2];
+            cur.splice(i, 3, String.fromCharCode(parseInt('0x' + hexString)))
+          }
         }
+        cur = cur.join('').split('=')[1];
+        params[loop] = cur;
       }
-      website = website.join('').split('=')[1];
-      console.log(website);
-      //TITLE:
-      var title = params[1].split('');
-      for (var i = 0; i < title.length; i++) {
-        if (title[i] === '%') {
-          var hexString = title[i + 1] + title[i + 2];
-          title.splice(i, 3, String.fromCharCode(parseInt('0x' + hexString)))
-        }
-      }
-      title = title.join('').split('=')[1];
-      console.log(title);
-      document.getElementById("pagetitle").innerHTML = title;
-      //ICON
-      var icon = params[2].split('');
-      for (var i = 0; i < icon.length; i++) {
-        if (icon[i] === '%') {
-          var hexString = icon[i + 1] + icon[i + 2];
-          icon.splice(i, 3, String.fromCharCode(parseInt('0x' + hexString)))
-        }
-      }
-      icon = icon.join('').split('=')[1];
-      document.getElementById("pageicon").href = icon;
+      document.getElementById("pagetitle").innerHTML = params[1];
+      document.getElementById("pageicon").href = params[2];
     </script>
   </head>
   <body>
     <iframe id="page" src=""></iframe>
-    <script>document.getElementById("page").src = website;</script>
+    <script>document.getElementById("page").src = params[0];</script>
   </body>
 </html>
