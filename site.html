@@ -10,8 +10,9 @@
       //params[0] => website
       //params[1] => title
       //params[2] => icon
-      
-      //WEBSITE:
+      if(params[2] === "on") {
+        params[2] = "https://www.google.com/s2/favicons?domain_url=" + params[0];
+      }
       for (var loop = 0; loop < params.length; loop++) {
         var cur = params[loop].split('');
         for (var i = 0; i < cur.length; i++) {
