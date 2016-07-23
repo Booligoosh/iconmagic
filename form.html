@@ -19,11 +19,22 @@
       Desired title:<br>
       <input type="text" name="title">
       <br>
+      <input id="check" type="checkbox" name="autoicon"> Use browser icon
+      <br>
       Icon url (image must be exactly square):<br>
-      <input type="text" name="icon">
+      <input id="ico" type="text" name="icon">
       <br><br>
       <input type="submit" value="Submit">
     </form>
-
+    <script>
+      while(true) {
+        if (document.getElementById("check").checked === true) {
+          document.getElementById("ico").disabled = "disabled";
+        }
+        else {
+          document.getElementById("ico").removeAttribute("disabled")
+        }
+      }
+    </script>
   </body>
 </html>
