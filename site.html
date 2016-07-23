@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title></title>
+    <title id="pagetitle"></title>
     <link rel="stylesheet" href="/iconmagic/style.css">
+    <link id="pageicon" rel="icon" type="image/png" href="">
     <script>
       var params = window.location.search.split('&');
       params[0] = params[0].slice(1, params[0].length);
@@ -30,6 +31,7 @@
       }
       title = title.join('').split('=')[1];
       console.log(title);
+      document.getElementById("pagetitle").innerHTML = title;
       //ICON
       var icon = params[2].split('');
       for (var i = 0; i < icon.length; i++) {
@@ -39,10 +41,11 @@
         }
       }
       icon = icon.join('').split('=')[1];
-      console.log(icon);
+      document.getElementById("pageicon").href = icon;
     </script>
   </head>
   <body>
-    <iframe href=""></iframe>
+    <iframe id="page" src=""></iframe>
+    <script>document.getElementById("page").src = website;</script>
   </body>
 </html>
