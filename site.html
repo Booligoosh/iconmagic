@@ -10,9 +10,9 @@
       //params[0] => website
       //params[1] => title
       //params[2] => icon
-      console.log(params[2] === "autoicon=on");
+      console.log("https://www.google.com/s2/favicons?domain_url=" + params[0].slice(8, params[0].length));
       if (params[2] === "autoicon=on") {
-        params[2] = "https://www.google.com/s2/favicons?domain_url=" + params[0].slice(8, params[0].length);;
+        params[2] = "https://www.google.com/s2/favicons?domain_url=" + params[0].slice(8, params[0].length);
       }
       for (var loop = 0; loop < params.length; loop++) {
         var cur = params[loop].split('');
