@@ -12,7 +12,7 @@
   </head>
   <body>
     <h2>Fill in the fields below:</h2>
-    <form action="site.html" name="form" method="get" autocomplete="off">
+    <form onchange="func()" action="site.html" name="form" method="get" autocomplete="off">
       Website needing icon url:<br>
       <input type="text" name="website">
       <br>
@@ -34,7 +34,6 @@
         else {
           document.getElementById("ico").removeAttribute("disabled")
         }
-        setTimeout(func, 1);
     }
     </script>
   </body>
