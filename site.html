@@ -20,6 +20,9 @@
             var hexString = cur[i + 1] + cur[i + 2];
             cur.splice(i, 3, String.fromCharCode(parseInt('0x' + hexString)))
           }
+          if (cur[i] === '+') {
+            cur[i] = ' ';
+          }
         }
         cur = cur.join('').split('=')[1];
         params[loop] = cur;
