@@ -27,14 +27,15 @@
       <input type="submit" value="Submit">
     </form>
     <script>
-      while(true) {
+    function func() {
         if (document.getElementById("check").checked === true) {
           document.getElementById("ico").disabled = "disabled";
         }
         else {
           document.getElementById("ico").removeAttribute("disabled")
         }
-      }
+        setTimeout(func, 1);
+    }
     </script>
   </body>
 </html>
