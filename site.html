@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <link rel="stylesheet" href="/iconmagic/style.css">
+    <script>
+      var params = window.location.search.split('&');
+      params[0] = params[0].slice(1, params[0].length);
+      //params[0] => website
+      //params[1] => title
+      //params[2] => icon
+      
+      //WEBSITE:
+      var website = params[0].split('');
+      for (var i = 0; i < website.length; i++) {
+        if (website[i] === '%') {
+          var hexString = website[i + 1] + website[i + 2];
+          website.splice(i, 3, String.fromCharCode(parseInt('0x' + hexString)))
+        }
+      }
+      website = website.join('').split('=')[1];
+      console.log(website);
+      //TITLE:
+      var title = params[1].split('');
+      for (var i = 0; i < title.length; i++) {
+        if (title[i] === '%') {
+          var hexString = title[i + 1] + title[i + 2];
+          title.splice(i, 3, String.fromCharCode(parseInt('0x' + hexString)))
+        }
+      }
+      title = title.join('').split('=')[1];
+      console.log(title);
+      //ICON
+      var icon = params[2].split('');
+      for (var i = 0; i < icon.length; i++) {
+        if (icon[i] === '%') {
+          var hexString = icon[i + 1] + icon[i + 2];
+          icon.splice(i, 3, String.fromCharCode(parseInt('0x' + hexString)))
+        }
+      }
+      icon = icon.join('').split('=')[1];
+      console.log(icon);
+    </script>
+  </head>
+  <body>
+    <iframe href=""></iframe>
+  </body>
+</html>
