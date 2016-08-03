@@ -3,6 +3,11 @@
   <head>
     <title id="pagetitle"></title>
     <link rel="stylesheet" href="/iconmagic/style.css">
+<link rel="apple-touch-icon" sizes="57x57" href="">
+    <link id="ati57" rel="apple-touch-icon" sizes="57x57" href="">
+    <link id="ati72" rel="apple-touch-icon" sizes="72x72" href="">
+    <link id="ati114" rel="apple-touch-icon" sizes="114x114" href="">
+    <link id="ati144" rel="apple-touch-icon" sizes="144x144" href="">
     <link id="pageicon" rel="icon" type="image/png" href="">
     <script>
       if (localStorage.id === undefined) {
@@ -13,6 +18,7 @@
       //params[0] => website
       //params[1] => title
       //params[2] => icon
+      //params[3] => id
       if (params[2] === "autoicon=on") {
         var icon = "https://www.google.com/s2/favicons?domain_url=" + params[0].slice(8, params[0].length);
       }
@@ -35,6 +41,11 @@
       }
       document.getElementById("pagetitle").innerHTML = params[1];
       document.getElementById("pageicon").href = icon;
+      document.getElementById("ati144").href = icon;
+      document.getElementById("ati114").href = icon;
+      document.getElementById("ati72").href = icon;
+      document.getElementById("ati57").href = icon;
+      
       
       if (localStorage.id.split(',').indexOf(params[3]) != -1) {
         window.location = params[0];
