@@ -32,10 +32,28 @@
       }
       document.getElementById("pagetitle").innerHTML = params[1];
       document.getElementById("pageicon").href = icon;
+      
+      if (localStorage.id.split(',').indexOf(params[4]) != -1) {
+        window.location = params[0];
+      }
+      else if (document.cookie.split(',').indexOf(params[4]) != -1) {
+
+        window.location = params[0];
+      }
+      function added() {
+        var lArray = localStorage.id.split(',');
+        var cArray = document.cookie.split(',');
+        lArray.push(params[4]);
+        cArray.push(params[4]);
+        localStorage.id = lArray.join(',');
+        document.cookie = cArray.join(',');
+      }
     </script>
   </head>
   <body>
-    <iframe id="page" src=""></iframe>
-    <script>document.getElementById("page").src = params[0];</script>
+    <h1>Add this to your home screen</h1>
+    <h2>Once you have done it, click the button below:</h2>
+    <button id="done" onclick="added()">I have added this to my home screen</button>
+    <script></script>
   </body>
 </html>
