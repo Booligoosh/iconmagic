@@ -3,7 +3,6 @@
   <head>
     <title id="pagetitle"></title>
     <link rel="stylesheet" href="/iconmagic/style.css">
-<link rel="apple-touch-icon" sizes="57x57" href="">
     <link id="ati57" rel="apple-touch-icon" sizes="57x57" href="">
     <link id="ati72" rel="apple-touch-icon" sizes="72x72" href="">
     <link id="ati114" rel="apple-touch-icon" sizes="114x114" href="">
@@ -58,6 +57,7 @@
         var lArray = localStorage.id.split(',');
         lArray.push(params[3]);
         localStorage.id = lArray.join(',');
+        location.reload();
       }
     </script>
   </head>
