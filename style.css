@@ -1,3 +1,4 @@
+@import 'https://fonts.googleapis.com/css?family=Dosis';
 body {
   margin: 0;
   background-image: 
@@ -10,7 +11,7 @@ body {
   background-position: center center;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  font-family: 'gothic';
+  font-family: 'Dosis', sans-serif;
   color: white;
   text-align: center;
 }
