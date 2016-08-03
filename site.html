@@ -5,8 +5,9 @@
     <link rel="stylesheet" href="/iconmagic/style.css">
     <link id="pageicon" rel="icon" type="image/png" href="">
     <script>
-      localStorage.id = 'zzz';
-      document.cookie = 'zzz';
+      if (localStorage.id === undefined) {
+        localStorage.id = 'zzz';
+      }
       var params = window.location.search.split('&');
       params[0] = params[0].slice(1, params[0].length);
       //params[0] => website
@@ -44,11 +45,8 @@
       }
       function added() {
         var lArray = localStorage.id.split(',');
-        var cArray = document.cookie.split(',');
         lArray.push(params[3]);
-        cArray.push(params[3]);
         localStorage.id = lArray.join(',');
-        document.cookie = cArray.join(',');
       }
     </script>
   </head>
