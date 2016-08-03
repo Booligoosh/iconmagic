@@ -19,7 +19,7 @@
       Desired title:<br>
       <input type="text" name="title">
       <br>
-      <input id="check" type="checkbox" name="autoicon"> Use website favicon
+      <input id="check" type="checkbox" name="autoicon" checked> Use website favicon
       <br>
       Icon url (image must be exactly square):<br>
       <input id="ico" type="text" name="icon">
@@ -30,6 +30,7 @@
     <script>
     var d = new Date();
     document.getElementById("id").value = d.getTime();
+    func();
     function func() {
         if (document.getElementById("check").checked === true) {
           document.getElementById("ico").disabled = "disabled";
