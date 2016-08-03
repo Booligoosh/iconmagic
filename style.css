@@ -21,6 +21,13 @@ body {
   text-decoration: none;
   color: white;
 }
+input[type="submit"],button {
+  margin-bottom: 1em;
+  width: 1em;
+  font-size: 1em;
+  height: 1em;
+  box-sizing: content-box;
+}
 h1 {
   font-size: 10em;
 }
