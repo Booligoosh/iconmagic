@@ -26,16 +26,16 @@
       Desired title:<br>
       <input type="text" name="title">
       <br>
-      <input id="check" type="checkbox" name="autoicon" checked> Use website favicon
-      <br>
-      <div id="icoText">
-      Icon url (image must be exactly square):<br>
-      <!-- old input <input id="ico" type="text" name="icon"> -->
+      <!-- old input <input id="check" type="checkbox" name="autoicon" checked> Use website favicon -->
       <!-- Slide THREE from http://cssdeck.com/labs/css-checkbox-styles -->
       <div class="slideThree">	
         <input type="checkbox" value="None" id="slideThree" name="check" />
         <label for="slideThree"></label>
       </div>
+      <br>
+      <div id="icoText">
+      Icon url (image must be exactly square):<br>
+      <input id="ico" type="text" name="icon">
       </div>
       <br><br>
       <input type="submit" value="Submit">
@@ -46,12 +46,12 @@
     document.getElementById("id").value = d.getTime();
     func();
     function func() {
-        if (document.getElementById("check").checked === true) {
-          document.getElementById("slideThree").disabled = "disabled";
+        if (document.getElementById("slideThree").checked === true) {
+          document.getElementById("ico").disabled = "disabled";
           document.getElementById("icoText").style.display = "none";
         }
         else {
-          document.getElementById("slideThree").removeAttribute("disabled");
+          document.getElementById("ico").removeAttribute("disabled");
           document.getElementById("icoText").style.display = "inline-block";
         }
     }
