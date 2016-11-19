@@ -22,8 +22,9 @@
       //check for http or https
       var protoString = params[0].split('');
       if (protoString[0] + protoString[1] + protoString[2] + protoString[3] != 'http') {
-        console.log('NO PROTOCOL GIVEN');
+        console.log('http://' + params[0]);
         params[0] = 'http://' + params[0];
+        console.log('NO PROTOCOL GIVEN');
       }
       
       if (params[2] === "autoicon=on") {
