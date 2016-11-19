@@ -1,7 +1,6 @@
 @import 'https://fonts.googleapis.com/css?family=Dosis';
 body {
   margin: 0;
-	overflow: hidden;
   background-image: 
     linear-gradient(
       rgba(0, 0, 0, 0.5),
@@ -76,4 +75,10 @@ iframe {
   padding: 0;
   border: none;
   border-width: 0;
+}
+
+@media only screen and (max-device-width: 699px) {
+	body {
+		overflow: hidden;
+	}
 }
