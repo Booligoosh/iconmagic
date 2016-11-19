@@ -30,7 +30,7 @@
       <br>
       <div id="icoText">
       Icon url (image must be exactly square):<br>
-      <input id="ico" type="text" name="icon">
+      <!-- old input <input id="ico" type="text" name="icon"> -->
       <!-- Slide THREE from http://cssdeck.com/labs/css-checkbox-styles -->
       <div class="slideThree">	
         <input type="checkbox" value="None" id="slideThree" name="check" />
@@ -47,11 +47,11 @@
     func();
     function func() {
         if (document.getElementById("check").checked === true) {
-          document.getElementById("ico").disabled = "disabled";
+          document.getElementById("slideThree").disabled = "disabled";
           document.getElementById("icoText").style.display = "none";
         }
         else {
-          document.getElementById("ico").removeAttribute("disabled");
+          document.getElementById("slideThree").removeAttribute("disabled");
           document.getElementById("icoText").style.display = "inline-block";
         }
     }
