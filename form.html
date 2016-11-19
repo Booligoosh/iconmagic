@@ -26,12 +26,7 @@
       Desired title:<br>
       <input type="text" name="title">
       <br>
-      <!-- old input <input id="check" type="checkbox" name="autoicon" checked> Use website favicon -->
-      <!-- Slide THREE from http://cssdeck.com/labs/css-checkbox-styles -->
-      <div class="slideThree">	
-        <input type="checkbox" value="None" id="slideThree" name="check" />
-        <label for="slideThree"></label>
-      </div>
+      <input id="check" type="checkbox" name="autoicon" checked> Use website favicon
       <br>
       <div id="icoText">
       Icon url (image must be exactly square):<br>
@@ -46,7 +41,7 @@
     document.getElementById("id").value = d.getTime();
     func();
     function func() {
-        if (document.getElementById("slideThree").checked === true) {
+        if (document.getElementById("check").checked === true) {
           document.getElementById("ico").disabled = "disabled";
           document.getElementById("icoText").style.display = "none";
         }
