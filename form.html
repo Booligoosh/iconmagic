@@ -41,9 +41,11 @@
     function func() {
         if (document.getElementById("check").checked === true) {
           document.getElementById("ico").disabled = "disabled";
+          document.getElementById("ico").style.display = "none";
         }
         else {
-          document.getElementById("ico").removeAttribute("disabled")
+          document.getElementById("ico").removeAttribute("disabled");
+          document.getElementById("ico").style.display = "block";
         }
     }
     </script>
