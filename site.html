@@ -22,8 +22,8 @@
       //check for http or https
       var protoString = params[0].split('');
       if (protoString[0] + protoString[1] + protoString[2] + protoString[3] != 'http') {
-        console.log('http://' + params[0]);
-        params[0] = 'http://' + params[0];
+        console.log('website=http://' + params[0].slice(8, params[0].length));
+        params[0] = 'website=http://' + params[0].slice(8, params[0].length);
         console.log('NO PROTOCOL GIVEN');
       }
       
