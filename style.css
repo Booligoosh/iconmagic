@@ -21,13 +21,6 @@ body {
   text-decoration: none;
   color: white;
 }
-input[type="submit"] {
-  margin-bottom: 1em;
-  width: 1em;
-  font-size: 1em;
-  height: 1em;
-  box-sizing: content-box;
-}
 button {
   margin-bottom: 1em;
   width: 100%;
@@ -51,6 +44,14 @@ form {
   font-size: 5em;
 }
 input {
+  background-color: rgba(255,255,255,0.5);
+  border-radius: 1em;
+  border-style: solid;
+  border-color: white;
+  border-width: 0.03em;
+  font-family: 'Dosis', sans-serif;
+  text-align: center;
+  color: rgba(255,255,255,0.75);
   font-size: 0.9em;
 }
 input[type="text"] {
@@ -64,6 +65,19 @@ input[type="text"], textarea, keygen {
     font-family: 'Dosis', sans-serif;
     text-align: center;
     color: rgba(255,255,255,0.75);
+}
+input[type="submit"] {
+  margin-bottom: 1em;
+  width: 1em;
+  font-size: 1em;
+  height: 1em;
+  box-sizing: content-box;
+  background-color: rgba(255,255,0,0.5);
+  color: rgba(0,0,0,0.75);
+  padding: 0.75em;
+  width: 50%;
+  padding-top: 0.5em;
+  padding-bottom: 0.85em;
 }
 iframe {
   position: absolute;
